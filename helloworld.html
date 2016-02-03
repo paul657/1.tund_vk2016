@@ -9,12 +9,21 @@
     <input type="text" id="eesnimi">
   <p>Perenimi: </p>
     <input type="text" id="perenimi">
-    <input type="submit" value="tervita">
-
+    <input type="submit" value="tervita" onclick="welcome()">
 
     <div id="output"></div>
     <script>
-      
+
+      var first_name;
+      var last_name;
+
+      function welcome(){
+        first_name = document.getElementById('eesnimi').value;
+        last_name = document.getElementById('perenimi').value;
+
+        console.log("tere " + first_name + " " + last_name);
+      }
+
     </script>
 </body>
 </html>
