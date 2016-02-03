@@ -6,10 +6,9 @@
 </head>
 <body>
   <p>Eesnimi: </p>
-    <input type="text" id="eesnimi">
+    <input type="text" id="eesnimi" onkeyup="welcome()">
   <p>Perenimi: </p>
-    <input type="text" id="perenimi">
-    <input type="submit" value="tervita" onclick="welcome()">
+    <input type="text" id="perenimi" onkeyup="welcome()">
 
     <div id="output"></div>
     <script>
@@ -22,6 +21,9 @@
         last_name = document.getElementById('perenimi').value;
 
         console.log("tere " + first_name + " " + last_name);
+
+        document.getElementById('output').innerHTML =
+        '<strong>Tere </strong>' + first_name + ' ' + last_name;
       }
 
     </script>
